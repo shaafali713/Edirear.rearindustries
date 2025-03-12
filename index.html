@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edirear - Watch & Share Videos</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google OAuth Library -->
+    <script src="https://accounts.google.com/gsi/client" async defer></script>
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'UA-XXXXXXXXX-X'); // Replace with your Google Analytics Tracking ID
+    </script>
+</head>
+<body>
+    <!-- Navbar -->
+    <header>
+        <div class="logo">Edirear</div>
+        <input type="text" id="search-bar" placeholder="Search videos...">
+        <button onclick="searchVideos()">🔍</button>
+        <div id="login-button" class="g_id_signin" data-type="standard"></div>
+        <button onclick="toggleTheme()">🌙</button>
+    </header>
+
+    <!-- Navigation Bar -->
+    <nav>
+        <button onclick="loadHome()">🏠 Home</button>
+        <button onclick="loadShorts()">🎬 Shorts</button>
+        <button onclick="document.getElementById('video-upload').click()">⬆ Upload</button>
+        <button onclick="loadProfile()">👤 You</button>
+    </nav>
+
+    <!-- Home Page -->
+    <main id="home-page">
+        <h2>Recommended Videos</h2>
+        <div id="videos-container"></div>
+    </main>
+
+    <!-- Shorts Page -->
+    <div id="shorts-page" style="display: none;">
+        <div id="shorts-container"></div>
+    </div>
+
+    <!-- Channel Page -->
+    <div id="channel-page" style="display: none;">
+        <div id="channel-info"></div>
+        <div id="channel-videos"></div>
+    </div>
+
+    <!-- Video Player Section -->
+    <div id="video-player" style="display: none;">
+        <iframe id="player" width="100%" height="600" frameborder="0" allowfullscreen></iframe>
+        <h3 id="video-title"></h3>
+        <div class="video-actions">
+            <button onclick="likeVideo()">👍 Like</button>
+            <button onclick="dislikeVideo()">👎 Dislike</button>
+            <button onclick="shareVideo()">🔗 Share</button>
+        </div>
+
+        <!-- Ad Container -->
+        <div id="ad-container"></div>
+
+        <!-- Suggested Videos -->
+        <h3>Suggested Videos</h3>
+        <div id="suggested-videos"></div>
+    </div>
+
+    <!-- File Upload Input -->
+    <input type="file" id="video-upload" style="display: none;" accept="video/*">
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
